@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 10px;
+}
+
+.nav{
+  margin: 10px 0;
+}
+
+.btn{
+  background-color: blue;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  &_green{
+    background-color: green;
+  }
+}
+
+$step: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 100, 150);
+
+$ot_map: (m: margin, p:padding);
+
+@each $n, $c in $ot_map{
+    .#{$n}{
+        @each $v in $step {
+            &t#{$v} {
+                #{$c}-top: #{$v}px;
+            }
+            &b#{$v} {
+                #{$c}-bottom: #{$v}px;
+            }
+            &r#{$v} {
+                #{$c}-right: #{$v}px;
+            }
+            &l#{$v} {
+                #{$c}-left: #{$v}px;
+            }
+        }
+    }
+}
+
+.preloaders{
+  background-image: url("../images/preloaders.gif");
+  background-size: 30px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+.statistic{
+
+}
+
+.statistic__item{
+  padding: 10px 0;
+  border-top: 1px #000 solid;
+}
