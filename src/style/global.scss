@@ -2,11 +2,8 @@
   margin: 0;
   padding: 0;
 }
-body{
-  margin: 10px;
-}
 
-.nav{
+h2{
   margin: 10px 0;
 }
 
@@ -63,4 +60,61 @@ $ot_map: (m: margin, p:padding);
 .statistic__item{
   padding: 10px 0;
   border-top: 1px #000 solid;
+  &:first-child{
+    border-top: 0px;
+  }
+}
+
+.page{
+  display: flex;
+}
+
+.page__menu{
+  width: 200px;
+  padding: 10px;
+  li{
+    cursor: pointer;
+  }
+}
+
+.page__main{
+  width: calc(100% - 240px);
+  padding: 10px;
+}
+
+
+.form{
+  display: flex;
+  margin-left: -5px;
+  margin-right: -5px;
+  align-items: center;
+  input{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 5px;
+    &:focus{
+      background-color: #effa5d;
+      outline: 0;
+      &:hover{
+        background-color: #effa5d;
+      }
+    }
+    &:hover{
+      background-color: #eaeaea;
+    }
+  }
+  button{
+    padding: 11px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  &:target{
+    background-color: #f10404;
+  }
 }
