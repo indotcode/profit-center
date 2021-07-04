@@ -143,12 +143,6 @@ class Data extends React.Component<{}, StateType>{
   }
 
   render() {
-    let startActiveClass = 'btn mb10';
-    let startActiveName = 'Старт';
-    if (store.data.length !== 0) {
-      startActiveClass = 'btn btn_green mb10';
-      startActiveName = 'Соединение установлено...'
-    }
     return (
       <div>
         <h2>Данные с Trademux</h2>
