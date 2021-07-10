@@ -80,7 +80,8 @@ class Data extends React.Component<{}, StateType>{
   time():string{
     let end = new Date();
     let elapsed = end.getTime() - store.timeStart;
-    let time = new Date(+elapsed);
+    let gmt = new Date(elapsed).getTimezoneOffset() * 60 * 1000;
+    let time = new Date(elapsed + gmt);
     let timeRes = String(time).split(' ');
     let day = Number(timeRes[2]) - 1;
     return timeRes[4] + (day !== 0 ? ', '+day+' д' : '')
